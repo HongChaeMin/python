@@ -49,5 +49,15 @@ print("곱하기 :", firstNumber * secondNumber)
 print("나누기 :", firstNumber / secondNumber)
 
 ########## 8 ##########
-number = input("네 자리수 정수 입력 >> ")
-print(number[3] + number[2] + number[1] + number[0])
+number = int(input("네 자리수 정수 입력 >> "))
+strNumber = str(number)
+
+print(strNumber[3] + strNumber[2] + strNumber[1] + strNumber[0])
+
+idx3 = number // 1000
+number -= idx3 * 1000
+idx2 = number // 100
+number -= idx2 * 100
+idx1 = number // 10
+number -= idx1 * 10
+print("%d%d%d%d" % (number, idx1, idx2, idx3))
