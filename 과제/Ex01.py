@@ -55,9 +55,9 @@ strNumber = str(number)
 print(strNumber[3] + strNumber[2] + strNumber[1] + strNumber[0])
 
 idx3 = number // 1000
-number -= idx3 * 1000
+number = idx3 % 1000
 idx2 = number // 100
-number -= idx2 * 100
+number = idx2 % 100
 idx1 = number // 10
-number -= idx1 * 10
+number = idx1 % 10
 print("%d%d%d%d" % (number, idx1, idx2, idx3))
